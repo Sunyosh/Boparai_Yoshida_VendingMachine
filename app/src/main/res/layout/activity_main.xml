@@ -6,6 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/fijid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:text="Fiji : P 20"
+        app:layout_constraintStart_toEndOf="@+id/cb4"
+        app:layout_constraintTop_toBottomOf="@+id/fiji" />
+
+    <TextView
+        android:id="@+id/sprited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:text="Sprite : P 17"
+        app:layout_constraintStart_toEndOf="@+id/cb3"
+        app:layout_constraintTop_toBottomOf="@+id/sprite" />
+
+    <TextView
+        android:id="@+id/tropicanad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="9dp"
+        android:text="Coke : P 34"
+        app:layout_constraintStart_toEndOf="@+id/cb2"
+        app:layout_constraintTop_toBottomOf="@+id/tropicana" />
+
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="38dp"
+        android:background="#757171"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/sprite"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coke" />
+
+    <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="38dp"
+        android:background="#757171"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/fiji"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tropicana" />
+
+    <CheckBox
+        android:id="@+id/cb3"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="#757171"
+        android:enabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprite" />
+
+    <CheckBox
+        android:id="@+id/cb4"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#757171"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@+id/sprite"
+        app:layout_constraintTop_toBottomOf="@+id/fiji" />
 
     <TextView
         android:id="@+id/header"
@@ -88,5 +167,27 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fiji" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="8dp"
+        android:text="Coke : P 12"
+        app:layout_constraintStart_toEndOf="@+id/cb1"
+        app:layout_constraintTop_toBottomOf="@+id/coke" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="27dp"
+        android:text="Enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
