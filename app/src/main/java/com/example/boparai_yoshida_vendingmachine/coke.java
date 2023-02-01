@@ -11,9 +11,8 @@ import android.widget.TextView;
 
 public class coke extends AppCompatActivity {
 Button back;
-Intent intent;
-TextView cprice;
-    TextView cchange;
+TextView cprice, cchange;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +20,20 @@ TextView cprice;
 
         back = findViewById(R.id.button2);
         cprice = findViewById(R.id.pricecoke);
+        cchange = findViewById(R.id.changecoke);
 
 
 
+        cprice.setText("Price :   P 12");
+
+        // getting the bundle back from the android
+        Bundle bundle = getIntent().getExtras();
+
+// getting the string back
+        String title = bundle.getString("key1", "Default");
+        cchange.setText(title);
 
 
-       cprice.setText("Price :  P 12");
-       cchange.setText("Change : "+ );
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

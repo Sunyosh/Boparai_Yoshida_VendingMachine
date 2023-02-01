@@ -23,7 +23,6 @@ Button button;
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
 
- int alter =1;
            userinput = (EditText) findViewById(R.id.editTextNumber);
            cokei = findViewById(R.id.coke);
            spritei = findViewById(R.id.sprite);
@@ -34,12 +33,16 @@ Button button;
             checkBox3 = findViewById(R.id.cb3);
             checkBox4 = findViewById(R.id.cb4);
             button = findViewById(R.id.button);
-            int input = Integer.parseInt(userinput.getText().toString().trim());
+
 
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    Bundle args = new Bundle();
+
+
                     int input = Integer.parseInt(userinput.getText().toString().trim());
 
                     if (input >= 34) {
@@ -52,7 +55,17 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,coke.class);
-                                intent.putExtra("input", "hello");
+                                // creating a bundle object
+                                Bundle bundle = new Bundle();
+
+// storing the string value in the bundle
+// which is mapped to key
+                                bundle.putString("key1", "GFG :- Main Activity");
+
+// passing the bundle into the intent
+                                intent.putExtras(bundle);
+
+// starting the intent
                                 startActivity(intent);
                             }
                         });
