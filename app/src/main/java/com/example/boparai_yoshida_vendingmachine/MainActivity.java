@@ -35,16 +35,16 @@ Button button;
             button = findViewById(R.id.button);
 
 
-
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    Bundle args = new Bundle();
-
-
                     int input = Integer.parseInt(userinput.getText().toString().trim());
 
+                    int coke =input - 12;
+                    int sprite = input - 17;
+                    int fiji = input - 20;
+                    int trop = input - 34;
                     if (input >= 34) {
                         checkBox1.setBackgroundColor(Color.GREEN);
                         checkBox2.setBackgroundColor(Color.GREEN);
@@ -55,17 +55,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,coke.class);
-                                // creating a bundle object
-                                Bundle bundle = new Bundle();
-
-// storing the string value in the bundle
-// which is mapped to key
-                                bundle.putString("key1", "GFG :- Main Activity");
-
-// passing the bundle into the intent
-                                intent.putExtras(bundle);
-
-// starting the intent
+                                intent.putExtra("final_grade",coke);
                                 startActivity(intent);
                             }
                         });
@@ -74,6 +64,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,sprite.class);
+                                intent.putExtra("final_grade",sprite);
                                 startActivity(intent);
                             }
                         });
@@ -82,6 +73,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,tropicana.class);
+                                intent.putExtra("final_grade",trop);
                                 startActivity(intent);
                             }
                         });
@@ -90,6 +82,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,fiji.class);
+                                intent.putExtra("final_grade",fiji);
                                 startActivity(intent);
                             }
                         });
@@ -102,6 +95,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,coke.class);
+                                intent.putExtra("final_grade",coke);
                                 startActivity(intent);
                             }
                         });
@@ -110,6 +104,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,fiji.class);
+                                intent.putExtra("final_grade",fiji);
                                 startActivity(intent);
                             }
                         });
@@ -118,6 +113,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,sprite.class);
+                                intent.putExtra("final_grade",sprite);
                                 startActivity(intent);
                             }
                         });
@@ -132,6 +128,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,coke.class);
+                                intent.putExtra("final_grade",coke);
                                 startActivity(intent);
                             }
                         });
@@ -140,6 +137,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,sprite.class);
+                                intent.putExtra("final_grade",sprite);
                                 startActivity(intent);
                             }
                         });
@@ -154,6 +152,7 @@ Button button;
                             @Override
                             public void onClick(View view) {
                                 Intent intent =new Intent(MainActivity.this,coke.class);
+                                intent.putExtra("final_grade",coke);
                                 startActivity(intent);
                             }
                         });
